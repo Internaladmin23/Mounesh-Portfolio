@@ -86,85 +86,13 @@
 
     </footer>
 
-    <script>
-        // Get form and status message element
-        const form = document.getElementById('sessionForm');
-        const statusMessage = document.getElementById('form-status');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); // Stop default form submission
-
-            const formData = new FormData(form);
-
-            // Send the form data to Formspree
-            fetch("https://formspree.io/f/xanevgar", {
-                    method: "POST",
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        // Update text on successful form submission
-                        statusMessage.textContent = "✅ Session Requested! We'll get in touch with you soon.";
-                        statusMessage.style.color = 'green'; // Change text color to green
-                        form.reset(); // Reset the form fields
-                    } else {
-                        // Handle error if form submission failed
-                        statusMessage.textContent = "❌ Oops! Something went wrong. Please try again.";
-                        statusMessage.style.color = 'red'; // Change text color to red
-                    }
-                })
-                .catch(() => {
-                    statusMessage.textContent = "❌ Oops! Something went wrong. Please try again.";
-                    statusMessage.style.color = 'red'; // Change text color to red
-                });
-        });
-    </script>
 
 
-    <style>
-        .connect-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-        }
-        
-        .connect-image img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        .connect-form {
-            max-width: 500px;
-        }
-        
-        .connect-form input,
-        .connect-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        
-        .connect-form button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        
-        .connect-form button:hover {
-            background-color: #45a049;
-        }
-    </style>
+
+
     <script src="js/newsletter.js"></script>
+    <script src="js/main.js"></script>
+
 
 </body>
 
