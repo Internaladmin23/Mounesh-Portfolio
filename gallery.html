@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="icon" href="images/favicon/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">ART BY YOU</div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="nav-menu" class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="connect.html" class="btn-connect">Let's Talk</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-container">
+        <div class="gallery-head">
+            <h1 class="gallery-h1">Gallery Showcase</h1>
+        </div>
+
+        <!-- Art Section -->
+        <section class="gallery-section">
+            <h2 class="gallery-subheading">Art</h2>
+            <div class="gallery">
+                <img src="images/art/1.jpg" alt="Art 1" data-category="art" />
+                <img src="images/art/2.jpg" alt="Art 2" data-category="art" />
+                <img src="images/art/3.jpg" alt="Art 3" data-category="art" />
+                <img src="images/art/4.jpg" alt="Art 3" data-category="art" />
+                <img src="images/art/5.jpg" alt="Art 3" data-category="art" />
+            </div>
+        </section>
+
+        <!-- Photography Section -->
+        <section class="gallery-section">
+            <h2 class="gallery-subheading">Photography</h2>
+            <div class="gallery">
+                <img src="images/photogrpahy/11-min.jpg" alt="Photo 1" data-category="photo" />
+                <img src="images/photogrpahy/141-min.jpg" alt="Photo 2" data-category="photo" />
+                <img src="images/photogrpahy/198-min.jpg" alt="Photo 3" data-category="photo" />
+                <img src="images/photogrpahy/218-min.jpg" alt="Photo 4" data-category="photo" />
+                <img src="images/photogrpahy/24-min.jpg" alt="Photo 4" data-category="photo" />
+                <img src="images/photogrpahy/246-min.jpg" alt="Photo 4" data-category="photo" />
+                <img src="images/photogrpahy/255-min.jpg" alt="Photo 4" data-category="photo" />
+                <img src="images/photogrpahy/272-min.jpg" alt="Photo 4" data-category="photo" />
+                <img src="images/photogrpahy/46-min.jpg" alt="Photo 4" data-category="photo" />
+                <img src="images/photogrpahy/278-min.jpg" alt="Photo 4" data-category="photo" />
+
+
+            </div>
+        </section>
+        <!-- designs section -->
+        <section class="gallery-section">
+            <h2 class="gallery-subheading">Designs</h2>
+            <div class="gallery">
+                <img src="images/designs/1.jpg" alt="Photo 1" data-category="photo" />
+                <img src="images/designs/2.jpg" alt="Photo 2" data-category="photo" />
+                <img src="images/designs/3.jpg" alt="Photo 3" data-category="photo" />
+                <img src="images/designs/4.jpg" alt="Photo 4" data-category="photo" />
+
+
+
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" />
+    </div>
+
+    <script src="js/gallery.js"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>ART BY YOU</h2>
+                <p>© 2025 All rights reserved.</p>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Stay in the loop</h3>
+                <p>Get updates and exclusive artwork offers.</p>
+                <form class="newsletter-form" action="https://formspree.io/f/your_form_id" method="POST" onsubmit="return showThankYou()">
+                    <input type="email" name="email" placeholder="Your email" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/mounesh7/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/mounesh.kn" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/Mounesh" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+        <button id="backToTop" class="back-to-top">↑ Top</button>
+    </footer>
+
+    <div id="thankYouPopup" class="thank-you-popup">
+        <p>Thanks for subscribing! 🎉</p>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

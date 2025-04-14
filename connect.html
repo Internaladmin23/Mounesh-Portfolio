@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect with Me</title>
+    <link rel="icon" href="images/favicon/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+    <link rel="stylesheet" href="css/connect.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">ART BY YOU</div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="nav-menu" class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="connect.html" class="btn-connect">Let's Talk</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="connect-wrapper">
+        <div class="connect-image">
+            <img src="images/5.jpg" alt="Connect Image">
+        </div>
+        <div class="connect-form">
+            <h2>Let's Talk</h2>
+            <p>Book a session with me to discuss your idea, artwork, or project.</p>
+
+            <!-- Form for session booking -->
+            <form id="sessionForm" action="https://formspree.io/f/xanevgar" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Request a Session</button>
+            </form>
+
+            <!-- Status message placeholder -->
+            <p id="form-status" style="margin-top: 10px;"></p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>ART BY YOU</h2>
+                <p>© 2025 All rights reserved.</p>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Stay in the loop</h3>
+                <p>Get updates and exclusive artwork offers.</p>
+                <form class="newsletter-form" action="https://formspree.io/f/your_form_id" method="POST" onsubmit="return showThankYou()">
+                    <input type="email" name="email" placeholder="Your email" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/mounesh7/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/mounesh.kn" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/Mounesh" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+        <button id="backToTop" class="back-to-top">↑ Top</button>
+    </footer>
+
+    <script>
+        // Get form and status message element
+        const form = document.getElementById('sessionForm');
+        const statusMessage = document.getElementById('form-status');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop default form submission
+
+            const formData = new FormData(form);
+
+            // Send the form data to Formspree
+            fetch("https://formspree.io/f/xanevgar", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Update text on successful form submission
+                        statusMessage.textContent = "✅ Session Requested! We'll get in touch with you soon.";
+                        statusMessage.style.color = 'green'; // Change text color to green
+                        form.reset(); // Reset the form fields
+                    } else {
+                        // Handle error if form submission failed
+                        statusMessage.textContent = "❌ Oops! Something went wrong. Please try again.";
+                        statusMessage.style.color = 'red'; // Change text color to red
+                    }
+                })
+                .catch(() => {
+                    statusMessage.textContent = "❌ Oops! Something went wrong. Please try again.";
+                    statusMessage.style.color = 'red'; // Change text color to red
+                });
+        });
+    </script>
+
+
+    <style>
+        .connect-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        
+        .connect-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .connect-form {
+            max-width: 500px;
+        }
+        
+        .connect-form input,
+        .connect-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .connect-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        .connect-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+</body>
+
+</html>

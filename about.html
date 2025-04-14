@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="icon" href="images/favicon/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">ART BY YOU</div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="nav-menu" class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="connect.html" class="btn-connect">Let's Talk</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="about-main">
+        <section class="about-hero">
+            <div class="about-img">
+                <img src="images/profilepic.jpeg" alt="Artist in studio" />
+            </div>
+            <div class="about-info">
+                <h1>About Me</h1>
+                <p>
+                    I'm a multidisciplinary artist and photographer based in India. My work captures emotions, nature, and modern life through vibrant visuals. I blend traditional methods with digital art to create stories that connect.
+                </p>
+                <p>
+                    Over the years, I’ve had the chance to work with brands, individuals, and galleries, and my featured works are available as limited prints and commissions.
+                </p>
+                <p>
+                    Over the years, I’ve had the chance to work with brands, individuals, and galleries, and my featured works are available as limited prints and commissions.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/mounesh7/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/mounesh.kn" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/Mounesh" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="featured-works">
+            <h2>Featured Work</h2>
+            <div class="works-grid">
+                <div class="work-card">
+                    <img src="images/4.jpg" alt="Artwork 1" />
+                    <h3>Art By Mounesh</h3>
+                </div>
+                <div class="work-card">
+                    <img src="images/3.jpg" alt="Artwork 2" />
+                    <h3>Click By Mounesh</h3>
+                </div>
+                <div class="work-card">
+                    <img src="images/6.jpg" alt="Artwork 3" />
+                    <h3>Design By Mounesh</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>ART BY YOU</h2>
+                <p>© 2025 All rights reserved.</p>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Stay in the loop</h3>
+                <p>Get updates and exclusive artwork offers.</p>
+                <form class="newsletter-form" onsubmit="return showThankYou()">
+                    <input type="email" name="email" placeholder="Your email" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/mounesh7/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/mounesh.kn" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/Mounesh" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+        <button id="backToTop" class="back-to-top">↑ Top</button>
+    </footer>
+
+    <div id="thankYouPopup" class="thank-you-popup">
+        <p>Thanks for subscribing! 🎉</p>
+    </div>
+
+    <script src="js/gallery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
